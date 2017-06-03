@@ -55,6 +55,13 @@ app.get('/about', (req,res) => {
   })
 })
 
+app.get('/projects', (req,res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Proyectos',
+    projectText: 'Pagina de proyectos'
+  })
+})
+
 app.get('/bad', (req,res) => {
   res.send({
     errorMessage: 'Unable to success this request! :('
